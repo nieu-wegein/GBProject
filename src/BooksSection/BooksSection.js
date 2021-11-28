@@ -13,13 +13,12 @@ export default class BooksSection extends Component {
 
     onCardClick = (obj) => {
         this.props.onRequest();
-       this.page = this.pb.buildPage(obj.id, this.props.onPageBuilt)
+       this.pb.buildPage(obj.id, this.props.onPageBuilt)
                           .then((page) => this.page = page)
                           .then(this.props.onPageBuilt);
     }
 
     render() {
-
             switch(this.props.status) {
                 case "off": return <ul className="booksList"/>;
                 case "receiving":return <Spinner/>

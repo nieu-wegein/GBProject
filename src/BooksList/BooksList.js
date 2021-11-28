@@ -11,7 +11,6 @@ export default class BooksList extends Component {
     }
 
 
-
     componentDidMount() {
         this.buildCards(this.props.booksList);
     }

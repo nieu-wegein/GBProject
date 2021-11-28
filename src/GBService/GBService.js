@@ -29,6 +29,7 @@ export default class GBService extends Component {
                     + (config.category === "all" ? "" : `+subject:${config.category}` )
                     + (config.sortingBy === "newest" ? "&orderBy=newest" : "")
                     + `&startIndex=${startIndex}&maxResults=30`
+                    + "&key=AIzaSyCBCOg3zmaNyWzFWDY-z4-EptT5z-z59AU"
         const bookListJSON = await this.getBooksJSON(url).then(books => {
             if (books.totalItems === null) this.props.onServiceError();
             if (books.totalItems === 0 || books.totalItems <= startIndex) books.items = [];
@@ -38,7 +39,7 @@ export default class GBService extends Component {
     }
 
     async getBookById(id){
-        const url = `https://www.googleapis.com/books/v1/volumes/${id}`
+        const url = `https://www.googleapis.com/books/v1/volumes/${id}?key=AIzaSyCBCOg3zmaNyWzFWDY-z4-EptT5z-z59AU`
         const bookListJSON = await this.getBooksJSON(url);
         return bookListJSON;
     }
