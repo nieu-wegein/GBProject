@@ -1,0 +1,60 @@
+.bookCard {
+
+
+    border-radius: 5px;
+    padding: 20px 0;
+    width: 280px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bookCard:hover {
+    cursor: pointer;
+}
+
+.bookCard_coverContainer{
+    width: 150px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+}
+
+.bookCard_cover {
+    max-width: 100%;
+    border: 1px solid grey;
+}
+
+.bookCard_info {
+    Font-family: "Calibri", sans-serif;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.bookCard_title {
+    margin: 10px 0 30px;
+    width: 100%;
+}
+
+.bookCard_category, .bookCard_authors {
+    text-align: center;
+    min-width: 1px;
+    min-height: 19px;
+     color: grey;
+}
+
+
+@media (max-width: 1312px) {
+    .bookCard {
+        padding: 20px 20px;
+        width: 240px;
+    }
+
+    .bookCard_info {
+        font-size: 14px;
+    }
+}

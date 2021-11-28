@@ -1,0 +1,59 @@
+.totalItems {
+    font-family: "Calibri", sans-serif;
+    font-size: 22px;
+    margin-bottom: 35px;
+}
+
+.booksList {
+    padding: 0;
+    list-style: none;
+    display: grid;
+    max-width: 1950px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    justify-items: center
+}
+
+.booksList_item {
+    margin-bottom: 40px;
+}
+
+.loadButton {
+    cursor: pointer;
+
+    margin-bottom: 40px;
+
+    font-family: "Calibri", sans-serif;
+    font-size: 20px;
+
+    width: 400px;
+    height: 50px;
+
+    background-color: black;
+    color: white;
+    border: 2px solid black;
+}
+
+.spinnerButton {
+    border: none;
+    width: 150px;
+    height: 150px;
+    background: url("../img/Spinner.svg") center no-repeat;
+}
+
+.spinnerButton span {
+    display: none;
+}
+
+
+@media (min-width: 1960px) {
+    .booksList {
+        width: 1950px;
+        margin: 16px auto;
+    }
+}
+
+@media (max-width: 1312px) {
+    .booksList {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+}
